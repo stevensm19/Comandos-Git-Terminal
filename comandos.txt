@@ -1,0 +1,61 @@
+Comandos basicos terminal:
+
+- ls: listado de carpetas en donde me encuentro es decir dir en windows;
+- pwd: ubicación actual;
+- mkdir: crear un directorio nueva carpeta;
+- touch archivo.extension: crear archivo vacío;
+- cat archivo.extension: muestra el contenido del archivo;
+- history: historial de comandos utilizados durante esa sesión;
+- rm archivo.extension: eliminación de archivo;
+- comando --help: ayuda sobre el comando;
+
+
+Comandos basicos git:
+
+- git init: inicializar el repositorio;
+- git stash: guardar sin ejecutar el comando add, esto sirve cuando quieres cambiar a otra rama y aunn o quieres guardar los cambios con add;
+- git add nombre_de_archivo.extension: agregar el archivo al repositorio;
+- git add .: agregar los cambios de la carpeta en la que nos encontramos (agregar todo);
+- git commit -m “Mensaje”: mensaje de los cambios;
+- git commit -am “Mensaje”: agregamos  y colocar mensaje de los cambios para el repositorio;
+- git remote add origin "link del repositorio remote": agrega el origen para enviar los commits que se han hecho.
+- git remote -v: para ver el link del origin;
+- git pull: trae lo que esta en el repositorio remoto;
+- git push: envía a un repositorio remoto lo que estamos haciendo;
+- git branch: crear una nueva rama;
+- git checkout: cambiar a otra rama o commit;
+- git merge: fusionar ramas;
+- git config --list: muestra la lista de configuración de git;
+- git config --list: muestra la configuración que se tiene para git;
+
+
+Visualizar cambios historicos:
+
+- git status: visualizar cambios;
+- git log: histórico de commits;
+- git log -p: explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+- git log --stat: histórico de cambios con las modificaciones basicas que se han hecho en cada commit;
+- git log --oneline: histórico de commits en una sola linea.
+- git log --all --graph -- decorate --oneline: mirar las ramas de formas mas ilustrada.
+
+Visualizar cambios por fechas:
+
+- git log --after=“2018-1-2”
+- git log --after=“today” y
+- git log --after=“2018-1-2” --before=“today”: commits para localizar por fechas;
+- git log --author=“Name Author”: commits realizados por autor que cumplan exactamente con el nombre;
+- git shortlog: indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits;
+- git log --grep "palabra": busca los commits que cumplan tal cual está escrito entre las comillas;
+- git log -3: limitamos el número de commits;
+- git log --grep=“INVIE” –i: busca los commits que cumplan sin importar mayúsculas o minúsculas;
+- git log – index.html: busca los commits en un archivo en específico;
+- git log -S “Por contenido”: buscar los commits con el contenido dentro del archivo;
+- git log > log.txt: guardar los logs en un archivo txt;
+
+
+Volver en el tiempo:
+
+- git reset "id commit" --hard: volver a un commit anterior;
+- git reflog: volver a un commit anterior;
+- git commit --amend: para corregir el nombre de un commit que no se ha enviado a un repositorio remoto o para agregar algo que falto.
+- git rm --cached archivo.extension: se usa para devolver el archivo que se tiene en ram cuando escribimos git add lo devuelve a estado natural mientra esta en staging;
